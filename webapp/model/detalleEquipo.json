@@ -1,0 +1,15 @@
+{
+	"Detalles":{
+		"EQUIPMENT":"Número de equipo",
+		"DESCRIPT":"Denominación de objeto técnico",
+		"STATUS_C":"Status individual de un objeto (breve)",
+		"STATUS_L":"Status individual de un objeto",
+		"READ_FLOC"	:"Identificación de ubicación técnica",
+		"PLTXT"	    :"Denominación de la ubicación técnica",
+		"MANFACTURE":"Fabricante del activo fijo",
+		"MANSERNO":"Número de serie según el fabricante",
+		"PLANPLANT":"Centro de planificación del mantenimiento (Ce.emplazam.)",
+		"COMP_CODE":"Sociedad",
+		"BUTXT":"Denominación de la sociedad o empresa"
+	}
+}

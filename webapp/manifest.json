@@ -1,0 +1,129 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "com.ibm.sap.pm.Equipos",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"equipos": {
+				"uri": "model/equipos.json",
+				"type": "JSON"
+			},
+			"detalleEquipo": {
+				"uri": "model/detalleEquipo.json",
+				"type": "JSON"
+			},
+			"historico": {
+				"uri": "model/historico.json",
+				"type": "JSON"
+			},
+			"ZEUIPOS_LIST_SRV": {
+				"uri": "/sap/opu/odata/sap/ZEUIPOS_LIST_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "com.ibm.sap.pm.Equipos.view.Equipos",
+			"type": "XML",
+			"async": true,
+			"id": "Equipos"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"servEquipos": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "ZEUIPOS_LIST_SRV",
+				"preload": true
+			},
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.ibm.sap.pm.Equipos.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.ibm.sap.pm.Equipos.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "RouteEquipos",
+					"pattern": "RouteEquipos",
+					"target": [
+						"TargetEquipos"
+					]
+				}
+			],
+			"targets": {
+				"TargetEquipos": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "Equipos",
+					"viewName": "Equipos"
+				}
+			}
+		}
+	}
+}

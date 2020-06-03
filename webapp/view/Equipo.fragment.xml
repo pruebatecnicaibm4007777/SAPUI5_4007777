@@ -1,0 +1,71 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+		<VBox class="sapUiSmallMargin">
+			<f:Form id="FormDisplay354wide" editable="false">
+				<f:layout>
+					<f:ResponsiveGridLayout labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4"
+						emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false"/>
+				</f:layout>
+				<f:formContainers>
+					<f:FormContainer>
+						<f:formElements>
+							<f:FormElement label="{i18n>filed1}">
+								<f:fields>
+									<Text text="{detalleEquipo>/Equipment}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>filed2}">
+								<f:fields>
+									<Text text="{detalleEquipo>/Descript}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>filed3}">
+								<f:fields>
+									<Text text="{detalleEquipo>/StatusC}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>filed4}">
+								<f:fields>
+									<Text text="{detalleEquipo>/StatusL}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>filed5}">
+								<f:fields>
+									<Text text="{detalleEquipo>/ReadFloc}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>filed6}">
+								<f:fields>
+									<Text text="{detalleEquipo>/Pltxt}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>filed7}">
+								<f:fields>
+									<Text text="{detalleEquipo>/Manfacture}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>filed8}">
+								<f:fields>
+									<Text text="{detalleEquipo>/Manserno}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>filed9}">
+								<f:fields>
+									<Text text="{detalleEquipo>/Planplant}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>filed10}">
+								<f:fields>
+									<Text text="{detalleEquipo>/CompCode}"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="{i18n>filed11}">
+								<f:fields>
+									<Text text="{detalleEquipo>/Butxt}"/>
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
+				</f:formContainers>
+			</f:Form>
+		</VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:t="sap.ui.table">
+	<Table id="idMantenimientoTable" inset="false" items="{ path: 'mantenimiento>/results', sorter: { path: 'Qmdat' } }">
+		<infoToolbar>
+			<OverflowToolbar>
+				<Label text="{i18n>tag3Title}"/>
+			</OverflowToolbar>
+		</infoToolbar>
+		<columns>
+			<Column width="12em">
+				<Text text="{i18n>tag3col1}"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="{i18n>tag3col2}"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="{i18n>tag3col3}"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{mantenimiento>Qmdat}"/>
+					<Text text="{mantenimiento>Qmnum}"/>
+					<Text text="{mantenimiento>Qmtxt}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>

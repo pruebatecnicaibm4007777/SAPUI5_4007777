@@ -1,0 +1,23 @@
+/* Enter your custom styles here */
+#container-Equipos---Equipos--page-title{
+	width: 100%;
+}
+
+.sapMITBFilter .sapMITBText {
+    font-weight: bolder;
+    overflow: initial;
+}
+
+#container-Equipos---Equipos--layout1{
+	width: 100%;
+}
+
+#container-Equipos---Equipos--layout1 div:nth-child(2){
+	float:none;
+}
+
+@media (min-width: 768px) {
+#container-Equipos---Equipos--layout1 div:nth-child(2){
+	float:right;
+}
+}

@@ -1,0 +1,41 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:t="sap.ui.table">
+	<Table id="idMaterialesTable" inset="false" items="{ path: 'materiales>/results', sorter: { path: 'Qmdat' } }">
+		<infoToolbar>
+			<OverflowToolbar>
+				<Label text="{i18n>tag4Title}"/>
+			</OverflowToolbar>
+		</infoToolbar>
+		<columns>
+			<Column width="12em">
+				<Text text="{i18n>tag4col1}"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="{i18n>tag4col2}"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="{i18n>tag4col3}"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="{i18n>tag4col4}"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="{i18n>tag4col5}"/>
+			</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="{i18n>tag4col6}"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{materiales>Matnr}"/>
+					<Text text="{materiales>Maktx}"/>
+					<Text text="{materiales>Labst}"/>
+					<Text text="{materiales>Meins}"/>
+					<Text text="{materiales>Lgort}"/>
+					<Text text="{materiales>werks}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>

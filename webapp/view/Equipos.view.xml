@@ -1,0 +1,51 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	controllerName="com.ibm.sap.pm.Equipos.controller.Equipos" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<sap.ui.layout:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout" id="layout1">
+							<sap.ui.layout:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout" id="layout2">
+								<Label text="Equipos" class="sapUiSmallMargin"/>
+								<ComboBox class="sapUiSmallMargin" id="cbEquipos" showSecondaryValues="true" items="{ path: 'equipos>/results', sorter: { path: 'text' } }"
+									change="onChangeComboBox">
+									<core:ListItem key="{equipos>Equipment}" text="{equipos>Descript}" additionalText="{equipos>Equipment}"/>
+								</ComboBox>
+							</sap.ui.layout:HorizontalLayout>
+							<VBox class="sapUiSmallMargin">
+								<Image src="{i18n>image}" width="100px"/>
+							</VBox>
+						</sap.ui.layout:HorizontalLayout>
+						<l:HorizontalLayout id="waiting" class="sapUiContentPadding" visible="false">
+							<l:content>
+								<BusyIndicator text="Consultando..." class="sapUiTinyMarginBottom"/>
+							</l:content>
+						</l:HorizontalLayout>
+						<IconTabBar selectedKey="__filter0" id="bar1">
+							<items>
+								<IconTabFilter text="{i18n>tab1}" icon="sap-icon://add-equipment" id="fltDatosEquipo">
+									<core:Fragment fragmentName="com.ibm.sap.pm.Equipos.view.Equipo" type="XML"/>
+								</IconTabFilter>
+								<IconTabFilter text="{i18n>tab2}" count="{historico>/count}" icon="sap-icon://history" id="fltHistomante">
+									<core:Fragment fragmentName="com.ibm.sap.pm.Equipos.view.Historico" type="XML"/>
+								</IconTabFilter>
+								<IconTabFilter text="{i18n>tab3}" count="{mantenimiento>/count}" icon="sap-icon://technical-object" iconColor="Positive"
+									id="fltMantAbiertos">
+									<core:Fragment fragmentName="com.ibm.sap.pm.Equipos.view.Mantenimiento" type="XML"/>
+								</IconTabFilter>
+								<IconTabFilter text="{i18n>tab5}" count="{mediciones>/count}" icon="sap-icon://shipping-status" iconColor="Positive" id="fltSensores">
+									<core:Fragment fragmentName="com.ibm.sap.pm.Equipos.view.Mediciones" type="XML"/>
+								</IconTabFilter>
+								<IconTabSeparator/>
+								<IconTabFilter text="{i18n>tab4}" count="{materiales>/count}" icon="sap-icon://developer-settings" iconColor="Critical" id="fltPiezasMate">
+									<core:Fragment fragmentName="com.ibm.sap.pm.Equipos.view.Materiales" type="XML"/>
+								</IconTabFilter>
+							</items>
+						</IconTabBar>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

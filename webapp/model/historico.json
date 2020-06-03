@@ -1,0 +1,31 @@
+[{
+	"EQUIPMENT": "Número de equipo",
+	"DESCRIPT": "Denominación de objeto técnico",
+	"AUFNR": "Número de orden",
+	"AUFTEXT": "Texto breve",
+	"UBICACION": "Identificación de ubicación técnica",
+	"UBICACIONTXT": "char255",
+	"DATE_INI": "2020/12/20",
+	"AUART": "Clase de documento de ventas",
+	"AUTYP": "Tipo de orden"
+}, {
+	"EQUIPMENT": "Número de equipo",
+	"DESCRIPT": "Denominación de objeto técnico",
+	"AUFNR": "Número de orden",
+	"AUFTEXT": "Texto breve",
+	"UBICACION": "Identificación de ubicación técnica",
+	"UBICACIONTXT": "char255",
+	"DATE_INI": "2020/12/20",
+	"AUART": "Clase de documento de ventas",
+	"AUTYP": "Tipo de orden"
+}, {
+	"EQUIPMENT": "Número de equipo",
+	"DESCRIPT": "Denominación de objeto técnico",
+	"AUFNR": "Número de orden",
+	"AUFTEXT": "Texto breve",
+	"UBICACION": "Identificación de ubicación técnica",
+	"UBICACIONTXT": "char255",
+	"DATE_INI": "2020/12/20",
+	"AUART": "Clase de documento de ventas",
+	"AUTYP": "Tipo de orden"
+}]
